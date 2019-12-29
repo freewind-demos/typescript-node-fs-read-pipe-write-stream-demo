@@ -1,17 +1,8 @@
 import fs from 'fs';
 
-const stream = fs.createReadStream('./bigfile.bin',)
+const readStream = fs.createReadStream('./package.json');
+const writeStream = fs.createWriteStream('./package2.json');
 
-stream.on('open', (fd) => {
-  console.log('### open', fd);
-})
+readStream.pipe(writeStream);
 
-// - Buffer: no encoding passed
-// - string: encoding passed
-stream.on('data', (data: Buffer) => {
-  console.log('### data', data);
-})
-
-stream.on('end', () => {
-  console.log('### end')
-})
+console.log('done')

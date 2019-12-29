@@ -1,8 +1,7 @@
-TypeScript Node Fs Read Stream Demo
-===================================
+TypeScript Node Fs Read Pipe Write Stream Demo
+==============================================
 
 ```
 npm install
-npm run generate-big-file
 npm run demo
 ```
